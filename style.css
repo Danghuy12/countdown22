@@ -1,0 +1,144 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+}
+.video-background {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.container {
+    min-width: 508px;
+    min-height: 308px;
+    background-color: rgba(255,255,255,0.85);
+    margin: 0 auto;
+    z-index: 2;
+    padding: 25px 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.input-container {
+    position: relative;
+    top: 20px;
+}
+
+h1 {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.form {
+    width: 480px;
+}
+
+label {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+input {
+    width: 95%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: white;
+    outline: none;
+    border-radius: 30px;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    background: #4bafa0;
+    color: white;
+    border-radius: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+}
+
+button:hover {
+    filter: brightness(110%);
+}
+
+
+ul {
+    margin-left: -45px;
+}
+
+li {
+    display: inline-block;
+    font-size: 30px;
+    list-style-type: none;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+li span {
+    display: block;
+    font-size: 80px;
+    text-align: center;
+}
+
+.complete {
+    position: relative;
+    top: 60px;
+}
+
+.complete-title {
+    animation: complete 4s infinite;
+}
+
+@keyframes complete {
+    0% {
+        color: rgb(238, 8, 8);
+    }
+    25% {
+        color: rgb(210, 231, 18);
+    }
+    50% {
+        color: rgb(32, 19, 218);
+        transform: scale(1.5);
+    }
+    75% {
+        color: rgb(215, 19, 233);
+    }
+    100% {
+        color: rgb(255, 255, 255);
+    }
+}
+
+/* smartphone */
+@media screen and (max-width: 600px) {
+    .video-background {
+        height: 100vh;
+        width: 100vw;
+    }
+    video {
+        object-fit: cover;
+        margin-top: -1px;
+    }
+}
+
